@@ -38,6 +38,7 @@ const (
 	PriorityUrgent
 )
 
+// Task represents a unit of work in the queue
 type Task struct {
 	ID       uuid.UUID
 	Type     TaskType
@@ -50,6 +51,7 @@ type Task struct {
 	Metadata TaskMetadata
 }
 
+// TaskMetadata represents the metadata of the unit of work in the queue
 type TaskMetadata struct {
 	CreatedAt time.Time
 	UpdatedAt time.Time
